@@ -63,6 +63,17 @@ export default [{
         "@typescript-eslint/ban-types": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "no-negated-condition": "error",
+        'no-restricted-imports': [
+            'error',
+            {
+                patterns: [
+                    {
+                        group: ['../*'],
+                        message: 'Usage of relative parent imports is not allowed.',
+                    },
+                ],
+            },
+        ],
         "import/first": ["error"],
 
         "import/newline-after-import": ["error", {
